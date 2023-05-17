@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dnd campaign organizer</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+  <body>
+    <header>
+      <h1>D&D Website</h1>
+    </header>
+    <nav>
+      <ul class="campaignList" id="home">
+          <li><a href="index.html">Home  <i class="fa-solid fa-dice-d20"></i></a></li>
+          <li><a href="campaign1.html">Campaign 1   <i class="fa-solid fa-scroll"></i></a></li>
+          <li><a href="campaign2.html">Campaign 2   <i class="fa-solid fa-scroll"></i></a></li>
+          <li><a href="campaign3.html">Campaign 3   <i class="fa-solid fa-sailboat"></i></a></li>
+      </ul>
+    </nav>
+    <div class="topnav">
+      <p class="active"></p>
+      
+      <!-- Navigation links (hidden by default) -->
+      <div id="myLinks">
+        <a href="index.html">Home  <i class="fa-solid fa-dice-d20"></i></a>
+        <a href="campaign1.html">Campaign 1  <i class="fa-solid fa-scroll"></i></a>
+        <a href="campaign2.html">Campaign 2   <i class="fa-solid fa-dragon"></i></a>
+        <a href="campaign3.html">Campaign 3 <i class="fa-solid fa-sailboat"></i></a>
+      </div>
+      <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <main>
+
+      <h2>Create Character</h2>
+    <div class="form">
+      <form>
+        <label for="enterName">Name:</label>
+        <input type="text" id="enterName"><br><br><br>
+
+        <div>
+
+          <label>Campaign:</label>
+
+          <select id="enterCampaign">
+            <option value="campaign1">Campaign 1</option>
+            <option value="campaign2">Campaign 2</option>
+            <option value="campaign3">Campaign 3</option>
+          </select><br><br><br>
+
+        </div><br>
+      
+        <label for="enterCharacterName">Character Name:</label>
+        <input type="text" id="enterCharacterName"><br><br><br>
+      
+        <label for="enterAc">AC:</label>
+        <input type="number" id="enterAc"><br><br><br>
+      
+        <label for="enterHp">HP:</label>
+        <input type="number" id="enterHp"><br><br><br>
+      
+        <fieldset>
+          <legend>Coin Amounts:</legend>
+      
+          <label for="enterPp">PP:</label>
+          <input type="number" id="enterPp">
+      
+          <label for="enterGp">GP:</label>
+          <input type="number" id="enterGp">
+      
+          <label for="enterSp">SP:</label>
+          <input type="number" id="enterSp">
+      
+          <label for="enterCp">CP:</label>
+          <input type="number" id="enterCp">
+        </fieldset><br><br><br>
+      
+        <fieldset>
+          <legend>Ability Scores:</legend>
+      
+          <label for="enterstrength">Strength:</label>
+          <input type="number" id="enterstrength">
+      
+          <label for="enterDexterity">Dexterity:</label>
+          <input type="number" id="enterDexterity">
+      
+          <label for="enterConstitution">Constitution:</label>
+          <input type="number" id="enterConstitution">
+      
+          <label for="enterIntelligence">Intelligence:</label>
+          <input type="number" id="enterIntelligence">
+      
+          <label for="enterWisdom">Wisdom:</label>
+          <input type="number" id="enterWisdom">
+      
+          <label for="enterCharisma">Charisma:</label>
+          <input type="number" id="enterCharisma">
+        </fieldset><br><br><br>
+      
+        <label for="enterAbilities">Abilities:</label>
+        <textarea id="enterAbilities"></textarea><br><br><br>
+      
+        <label for="enterInventory">Inventory:</label>
+        <textarea id="enterInventory"></textarea><br><br><br>
+
+        <div class="formButtons">
+        <div class="topButtons">
+          <button id="insert" type="button">New</button>
+          <button id="update" type="button">Update</button>
+        </div>
+        <div class="botButtons">
+          <button id="remove" type="button">Remove</button>
+          <button id="clear" type="submit">Clear</button>
+        </div>
+        </div>
+
+      </form>
+    </div>
+ 
+      
+    </main>
+    <footer>
+
+      <p>&copy; 2023 D&D Website Powerd by: <a href="https://cornhub.website/">Corn</a></p>
+      
+
+    </footer>
+
+    <script type="module" src="characters.js"></script>
+    <script src="myFunction.js"></script>
+
+
+  </body>
+</html>

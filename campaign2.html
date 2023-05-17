@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dnd campaign organizer</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+  <body>
+    <header>
+      <h1>Campaign 2</h1>
+    </header>
+<!-- Top Navigation Menu -->
+<nav>
+  <ul class="campaignList">
+      <li><a href="index.html">Home  <i class="fa-solid fa-dice-d20"></i></a></li>
+      <li><a href="campaign1.html">Campaign 1   <i class="fa-solid fa-scroll"></i></a></li>
+      <li><a href="campaign2.html">Campaign 2   <i class="fa-solid fa-scroll"></i></a></li>
+      <li><a href="campaign3.html">Campaign 3   <i class="fa-solid fa-sailboat"></i></a></li>
+  </ul>
+</nav>
+<div class="topnav">
+  <p class="active"></p>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+    <a href="index.html">Home  <i class="fa-solid fa-dice-d20"></i></a>
+    <a href="campaign1.html">Campaign 1  <i class="fa-solid fa-scroll"></i></a>
+    <a href="campaign2.html">Campaign 2   <i class="fa-solid fa-dragon"></i></a>
+    <a href="campaign3.html">Campaign 3 <i class="fa-solid fa-sailboat"></i></a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+    <main>
+<div class="topMain">
+  <div class="findID">
+    <h1 class="notTitle">Current characternames</h1>
+    <h3 id="displayIDs"></h3>
+  </div>
+    <div class="fireStorage">
+        <input
+        type="file"
+        class="inputFile"
+        id="fileInp"
+        onchange="getFile(event)"
+        accept="image/png, image/jpeg, video/mp4"
+      />
+      <label for="fileInp">+</label>
+      <span class="fileText"></span>
+      <button onclick="uploadImage()">UPLOAD IMAGE</button>
+      <div class="bar">
+        <div class="progress"></div>
+      </div>
+      <div class="uploadPercentage">0%</div>
+  
+      <div class="imageUploaded">
+        <img alt="" class="img" />
+      </div>
+  </div>
+</div>
+ 
+      <div>
+       <h1 class="notTitle">Find by charactername</h1>
+        <h4>ID</h4>
+        <input id="findID" type="text"><br><br>
+      <div class='buttons'>
+        <button id="find">FIND</button>
+        <form>
+          <button type="submit">Clear</button>
+        </form>
+        <button id="remove">Remove</button>
+      </div>
+
+        
+
+        <h3 id="findName" ></h3>
+        <h3 id="findCharacterName" ></h3><br><br>
+        <h3 id="findAc" ></h3>
+        <h3 id="findHp" ></h3><br><br>
+        <h3 id="findstrength" ></h3>
+        <h3 id="findDexterity" ></h3>
+        <h3 id="findConstitution" ></h3>
+        <h3 id="findIntelligence" ></h3>
+        <h3 id="findWisdom" ></h3>
+        <h3 id="findCharisma" ></h3><br><br>
+        <h3 id="findAbilities" ></h3><br><br>
+        <h3 id="findPp" ></h3>
+        <h3 id="findGp" ></h3>
+        <h3 id="findSp" ></h3>
+        <h3 id="findCp" ></h3><br><br>
+        <h3 id="findInventory" ></h3><br><br>
+    </div>
+
+
+    </main>
+    <footer>
+
+      <p>&copy; 2023 D&D Website Powerd by: <a href="https://cornhub.website/">Corn</a></p>
+
+    </footer>
+
+    <script type="module" src="findCp2.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+    <script src="uploadImgCp2.js"></script>
+    <script src="myFunction.js"></script>
+
+    
+    
+
+  </body>
+</html>
